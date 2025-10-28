@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const inputs = document.querySelectorAll('.code');
 
 inputs[0].focus();
@@ -18,8 +17,10 @@ inputs.forEach((input, index) => {
 
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Backspace') {
-      if (input.value === '' && index > 0) {
-        inputs[index - 1].focus();
+      if (input.value === '') {
+        if (index > 0) {
+          inputs[index - 1].focus();
+        }
       } else {
         input.value = '';
       }
