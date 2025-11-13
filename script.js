@@ -18,6 +18,7 @@ inputs.forEach((input, index) => {
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Backspace') {
       if (input.value === '') {
+		  e.preventDefault()
         if (index > 0) {
           inputs[index - 1].focus();
         }
